@@ -42,11 +42,12 @@ const getAnchorAndDir = (
   h: number
 ): { anchor: [number, number]; dir: [number, number] } => {
   const outside = 0.2;
+  const edgeOffset = outside * Math.min(w, h);
   switch (origin) {
     case 'top-left':
-      return { anchor: [0, -outside * h], dir: [0, 1] };
+      return { anchor: [0, -edgeOffset], dir: [0, 1] };
     case 'top-right':
-      return { anchor: [w, -outside * h], dir: [0, 1] };
+      return { anchor: [w, -edgeOffset], dir: [0, 1] };
     case 'left':
       return { anchor: [-outside * w, 0.5 * h], dir: [1, 0] };
     case 'right':
@@ -58,7 +59,7 @@ const getAnchorAndDir = (
     case 'bottom-right':
       return { anchor: [w, (1 + outside) * h], dir: [0, -1] };
     default: // "top-center"
-      return { anchor: [0.5 * w, -outside * h], dir: [0, 1] };
+      return { anchor: [0.5 * w, -edgeOffset], dir: [0, 1] };
   }
 };
 
