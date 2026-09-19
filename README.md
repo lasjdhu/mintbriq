@@ -19,4 +19,4 @@ Open [localhost:3000](http://localhost:3000) and enter a GitHub username.
 
 ## Preview
 
-![MintBriq interface](app/opengraph-image.png)
+![MintBriq project recommendation interface](readme-assets/preview.png)
